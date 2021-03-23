@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Demo 6: Javascript operatoren</title>
+</head>
+<body>
+    <H1>Demo 6: Javascript operatoren</H1>
+    <script>
+       // Oefening 1
+        let textje = "Good ";
+        textje += "Morning";
+        document.writeln('Oefening1: ' + textje + '<br />');
+
+       // Oefening 2
+        let x1 = 10; x1 += 5;
+        document.writeln('Oefening2: ' + x1 + '<br />');
+
+        //Oefening 3
+        let x2 = 10; x2 -= 5;
+        //var is gevaarlijk omdat je veel moeilijk te vinden fouten kan maken
+        document.writeln('Oefening3: ' + x2 + '<br />');
+        //Oefening 4
+        let x4 = 10; x4 *= 5;
+        document.write('Oefening4: ' + x4 + '<br />');
+
+        //Oefening 5
+        let x5 = 10; x5 /= 5;
+        document.write('Oefening5: ' + x5 + '<br />');
+
+        //Oefening 6
+        let x6 = 10; x6 %= 5;
+        document.write('Oefening6: ' + x6 + '<br />');
+        //Oefening 7
+        let x7 = 10; x7 **= 2;
+        document.write('Oefening7: ' + x7 + '<br />');
+        {//scope van deze x:
+            let x = 10;
+            document.write('Eerste x: ' + x + '<br />');
+        }
+        {//andere scope (andere x)
+            let x = 20;
+            document.write('Tweede x: ' + x + '<br />');
+        }
+        let x;//nog andere scope (een derde x)
+        { x = 30; document.write('Derde x: ' + x + '<br />');}
+        { x = 40; document.write('nog Derde x: ' + x);}
+    </script>
+</body>
+</html>
