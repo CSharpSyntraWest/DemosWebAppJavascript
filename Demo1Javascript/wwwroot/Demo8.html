@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Demo 8: if-condition Js</title>
+</head>
+<body>
+    <h1>Demo 8:Javascript if-conditie</h1>
+    <form name="inputForm">
+        Name:<br />
+        <input type="number" id="txtAge" value="16" />
+    </form>
+    <script>
+        let age = document.getElementById("txtAge").value;
+
+        //16;
+        if (age < 12) {
+            document.write("Te jong");
+            //alert("Niet voor minderjarigen!");
+        }
+        else if (age < 18) {
+            document.write("Jong genoeg");
+        }
+        else {
+            document.write("volwassen");
+        }
+    </script>
+</body>
+</html>
