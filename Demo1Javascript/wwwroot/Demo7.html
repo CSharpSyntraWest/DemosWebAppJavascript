@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Demo 7: js vergelijkingsoperatoren</title>
+</head>
+<body>
+    <h1>Demo 7: Javascript vergelijkingsoperatoren</h1>
+    <script>
+        let x = 5;
+        document.write('x == 5 ->' + (x == 5) );//true
+        document.write('<br /> x == "5" ->' + (x == "5"));//true
+        document.write('<br /> x === 5 ->' + (x === 5));//true
+        document.write('<br /> x === "5" ->' + (x === "5"));//false (niet hetzelfde data type)
+
+        document.write('<br /> x != 8 ->' + (x != 8));//true
+        document.write('<br /> x != "5" ->' + (x != "5"));//false (5 wordt gelijk aan "5" beschouwd)
+        document.write('<br /> x !== 8 ->' + (x !== 8));
+        document.write('<br /> x !== "5" ->' + (x !== "5"));//true (5 wordt verschillend aan "5" beschouwd: niet hetzelfde data type)
+
+        let isOud = false;
+        let isSchuldig = true;
+
+        document.write('<br /> isOud || isSchuldig ->' + (isOud || isSchuldig));//Logische OR
+        document.write('<br /> isOud && isSchuldig ->' + (isOud && isSchuldig));//Logische AND
+        document.write('<br /> isOud == isSchuldig ->' + (isOud == isSchuldig));//Logische vergelijking
+        document.write('<br /> isOud != isSchuldig ->' + (isOud != isSchuldig));//Logische verschillend
+        document.write('<br /> isOud == "false"    ->' + (isOud == "false"));//?wat geeft dit?
+        document.write('<br /> isOud === "false"   ->' + (isOud === "false"));//?wat geeft dit?
+        document.write('<br /> isOud != "false"   ->' + (isOud != "false"));//Logische verschillend
+        document.write('<br /> isOud !== "false"   ->' + (isOud !== "false"));//Logische verschillend
+    </script>
+</body>
+</html>
