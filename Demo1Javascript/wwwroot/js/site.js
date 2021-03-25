@@ -93,8 +93,40 @@ function bestelling() {
     bestellingTekst += "<h3>Familienaam: " + familienaam + "</h3>"; 
     let voornaam = document.pizzaOrderForm.voornaam.value;
     bestellingTekst += "<h3>Voornaam: " + voornaam + "</h3>"; 
+
+    let email = document.pizzaOrderForm.email.value;
+    bestellingTekst += "<h3>Email: " + email + "</h3>"; 
+
+    let wachtwoord = document.pizzaOrderForm.wachtwoord.value;
+    bestellingTekst += "<h3>Wachtwoord: " + wachtwoord + "</h3>"; 
+    let pizzas = document.getElementsByName("pizza");
+    for (let i = 0; i < pizzas.length; i++) {
+        if (pizzas[i].selected) {
+            bestellingTekst += "<h3>Pizza: " + pizzas[i].value + "</h3>"; 
+        }
+    }
+    let aantal = document.pizzaOrderForm.aantal.value;
+    bestellingTekst += "<h3>Aantal: " + aantal + "</h3>"; 
+    let extras = document.pizzaOrderForm.extras;
+    for (let i = 0; i < extras.length; i++) {
+        if (extras[i].checked) {
+            bestellingTekst += "<h3>Extra: " + extras[i].value + "</h3>"; 
+        }
+    }
+    let datum = document.pizzaOrderForm.datum.value;
+    bestellingTekst += "<h3>Datum: " + datum + "</h3>";
+
+    let uren = document.pizzaOrderForm.levering;
+    for (let i = 0; i < uren.length; i++) {
+        if (uren[i].checked) {
+            bestellingTekst += "<h3>Uur: " + uren[i].value + "</h3>";
+            break;//omdat er bij radio button-group maar één enkele op checked kan staan
+        }
+    }
+
+    let info = document.pizzaOrderForm.extra;
+    bestellingTekst += "<h3>Extra Info: " + info.value + "</h3>";
+
     let bestellingParagraph = document.getElementById("bestelling");
     bestellingParagraph.innerHTML = bestellingTekst;
-
-    
 }
