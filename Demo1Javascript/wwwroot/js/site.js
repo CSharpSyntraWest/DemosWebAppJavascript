@@ -90,7 +90,9 @@ function maximum(getal1, getal2) {
 function bestelling() {
     let familienaam = document.getElementById("naam").value;
     let bestellingTekst = "<h2>Uw bestelling:</h2>";
-    bestellingTekst += "<h3>Familieaam: " + familienaam + "</h3>"; 
+    bestellingTekst += "<h3>Familienaam: " + familienaam + "</h3>"; 
+    let voornaam = document.pizzaOrderForm.voornaam.value;
+    bestellingTekst += "<h3>Voornaam: " + voornaam + "</h3>"; 
     let bestellingParagraph = document.getElementById("bestelling");
     bestellingParagraph.innerHTML = bestellingTekst;
 

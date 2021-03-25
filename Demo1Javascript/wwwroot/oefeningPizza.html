@@ -8,38 +8,68 @@
 </head>
 
 <body>
-    <form name="orderPizzaForm" id="orderPizzaForm">
+
+    <form name="pizzaOrderForm">
         <fieldset>
-            <legend>Plaats Bestelling</legend>
+            <legend>Plaats bestelling</legend>
+
             <label for="naam">Naam</label>
             <input type="text" name="naam" id="naam" placeholder="Naam" required />
-            <!--nog toe te voegen: Voornaam, Email, wachtwoord-->
+
+            <label for="voornaam">Voornaam</label>
+            <input type="text" name="voornaam" id="voornaam" placeholder="Voornaam" required />
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" />
+
+            <label for="wachtwoord">Wachtwoord</label>
+            <input type="password" name="wachtwoord" id="wachtwoord" required />
+
             <label for="pizza">Pizza</label>
             <select name="pizza" id="pizza" required>
                 <option value="napolitano">Napolitano</option>
                 <option value="4fromaggi">Quatro fromaggi</option>
-                <option value="mozzarello" selected>Mozarella</option>
-                <!--nog toe te voegen: opties Speciale en Bolognese-->
+                <option value="mozzarello" selected>Mozarello</option>
+                <option value="speciale">Speciale</option>
+                <option value="bolognese">Bolognese</option>
             </select>
+
+            
+
+            <label for="aantal">Aantal</label>
+            <input type="number" name="aantal" id="aantal" min="1" max="10" required />
+
             <div>
                 <div class="description">Extra's?</div>
-                <!--nog toe te voegen: 3 checkboxes met ids en naam=extras en ids: kaas, hesp, tomaten
-            standaard staan kaas en tomaten aangevinkt-->
+                <input type="checkbox" id="kaas" name="extras" value="kaas" checked /><label for="kaas">kaas</label>
+                <input type="checkbox" name="extras" id="hesp" value="hesp" /><label for="hesp">hesp</label>
+                <input type="checkbox" name="extras" id="tomaten" value="tomaten" checked /><label for="tomaten">tomaten</label>
             </div>
             <div>
-                <!--label Datum en input type="date", name en id = "datum" en required-->
+                <label for="datum">Datum</label>
+                <input type="date" name="datum" id="datum" required />
             </div>
             <div>
                 <div class="description">Uur</div>
-                <!--3 radio buttons met naam:"levering" en ids lev16, lev18, lev20-->
-                <!--standaard id 18u-20u op checked-->
+                <input type="radio" name="levering" id="lev16" value="1618" required />
+                <label for="lev16">16-18u</label>
+
+                <input type="radio" name="levering" id="lev18" value="1820" checked required />
+                <label for="lev18">18-20u</label>
+
+                <input type="radio" name="levering" id="lev20" value="2022" required />
+                <label for="lev20">20-22u</label>
             </div>
-            <!--hier nog een label Extra informatie en een textarea met name en id="extra"-->
-            <input type="button" value="Bestel" />
+            <label for="extra">Extra informatie</label>
+            <textarea name="extra" id="extra"></textarea>
+
+            <input type="button" value="Bestel" onclick="bestelling()" />
+
         </fieldset>
-            
-        </form>
+    </form>
+    <p id="bestelling"></p>
+    <script src="js/site.js"></script>
 
-    </body>
+</body>
 
-    </html>
+</html>
