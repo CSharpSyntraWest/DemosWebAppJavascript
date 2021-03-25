@@ -14,7 +14,10 @@
         <input type="button" value="som" onclick="som()" /><br />
         <input type="button" value="max" onclick="alert('Het max is: ' + maximum(document.inputForm.getal1.value,document.inputForm.getal2.value))" />
         <br />
-        <button onclick="alert('clicked on image in button!')"><img src="http://www.moorsmagazine.com/images/leaning-tower-pisa.jpg" alt="pisa tower image"  /></button>
+        <!--<button onclick="setImage('https://i.pinimg.com/originals/f7/c6/18/f7c618bd53795a3e1d9048bd8b9edefe.jpg')">
+            <img name="myImage" src="https://pngimg.com/uploads/pizza/pizza_PNG43986.png" alt="pisa tower image"  />
+        </button>-->
+        
         <br />
         Reg expression: <br />
         <input type="text" id="input" value="" pattern="[a-zA-Z]+[0-9]{1}-[0-9]{4}" />
@@ -22,6 +25,11 @@
         <input type="submit" value="submit" />
     </form>
     <div id="resultaat"></div>
+    <script>
+        function setImage(url) {
+            document.inputForm.myImage.src = url;
+        }
+    </script>
     <script src="js/site.js"></script>
 </body>
 </html>

@@ -44,8 +44,8 @@ function groet() {
 
 //Demo12.html
 function som() {
-    let naam = prompt("Wat is uw naam?");
-    alert('Hallo ' + naam);
+    //let naam = prompt("Wat is uw naam?");
+    //alert('Hallo ' + naam);
     let getal1 = parseInt(document.getElementById("getal1").value);
     let getal2 = parseInt(document.getElementById("getal2").value);
 
@@ -53,6 +53,7 @@ function som() {
     let result = document.getElementById("resultaat");
     //parse
     result.innerHTML = "<h1> de som is: " + (getal1 + getal2) + "</h1>"
+    result.style.color = "red";
 }
 
 //Demo13.html
