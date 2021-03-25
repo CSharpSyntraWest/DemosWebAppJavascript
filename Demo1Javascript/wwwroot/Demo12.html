@@ -5,14 +5,18 @@
     <title>Oefening : function Button onclick</title>
 </head>
 <body>
-    <form name="inputForm">
+    <form name="inputForm" method="post" action="">
         Getal 1:<br />
         <input type="number" id="getal1" value="" />
         <br />
         Getal 2:<br />
         <input type="number" id="getal2" value="" />
         <input type="button" value="som" onclick="som()" />
-
+        <br />
+        Reg expression: <br />
+        <input type="text" id="input" value="" pattern="[a-zA-Z]+[0-9]{1}-[0-9]{4}" />
+        <br />
+        <input type="submit" value="submit" />
     </form>
     <div id="resultaat"></div>
     <script src="js/site.js"></script>
