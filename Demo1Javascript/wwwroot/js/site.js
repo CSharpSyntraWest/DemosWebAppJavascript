@@ -62,9 +62,8 @@ function sayHi() {
     let lastname = document.myInputForm.lastName.value;
     let fullname = firstname + " " + lastname;
     alert('Hi ' + fullname + '!');
-    //let messageParagraph = document.getElementById("message");
-    //messageParagraph.innerHTML = "<h1>Hi " + fullname + "!</h1>";
-    document.myInputForm.message.innerHTML = "Hi " + fullname + "!";
+
+    document.myInputForm.message.value = "Hi " + fullname + "!";
 }
 
 //Demo15.html
