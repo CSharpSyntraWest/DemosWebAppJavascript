@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Demo 13: name attribuut</title>
+</head>
+<body>
+    <form name="myInputForm">
+        <table border="0">
+            <tr>
+                <td>first name:</td>
+                <td>
+                    <input type="text" name="firstName" value="Jos" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    last name:
+                </td>
+                <td>
+                    <input type="text" name="lastName" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" name="groet" value="say Hi" onclick="sayHi()" />
+                </td>
+            </tr>
+        </table>
+        <textarea id="message" name="message" rows="3" cols="10"></textarea>
+    </form>
+    
+    <script>
+        //alert(document.myInputForm.firstName.value);
+    </script>
+    <script src="js/site.js"></script>
+</body>
+</html>

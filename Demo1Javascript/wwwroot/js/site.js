@@ -54,3 +54,15 @@ function som() {
     //parse
     result.innerHTML = "<h1> de som is: " + (getal1 + getal2) + "</h1>"
 }
+
+//Demo13.html
+function sayHi() {
+   
+    let firstname = document.myInputForm.firstName.value;
+    let lastname = document.myInputForm.lastName.value;
+    let fullname = firstname + " " + lastname;
+    alert('Hi ' + fullname + '!');
+    //let messageParagraph = document.getElementById("message");
+    //messageParagraph.innerHTML = "<h1>Hi " + fullname + "!</h1>";
+    document.myInputForm.message.innerHTML = "Hi " + fullname + "!";
+}
