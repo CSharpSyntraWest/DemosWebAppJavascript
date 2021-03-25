@@ -85,3 +85,14 @@ function validate() {
 function maximum(getal1, getal2) {
     return getal1 > getal2 ? getal1 : getal2;
 }
+
+//OefeningPizza.html
+function bestelling() {
+    let familienaam = document.getElementById("naam").value;
+    let bestellingTekst = "<h2>Uw bestelling:</h2>";
+    bestellingTekst += "<h3>Familieaam: " + familienaam + "</h3>"; 
+    let bestellingParagraph = document.getElementById("bestelling");
+    bestellingParagraph.innerHTML = bestellingTekst;
+
+    
+}
