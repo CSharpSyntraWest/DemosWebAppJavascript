@@ -66,3 +66,22 @@ function sayHi() {
     //messageParagraph.innerHTML = "<h1>Hi " + fullname + "!</h1>";
     document.myInputForm.message.innerHTML = "Hi " + fullname + "!";
 }
+
+//Demo15.html
+function validate() {
+    let text = document.getElementById("textfield").value;
+    let genders = document.getElementsByName("gender")
+    
+    let message = document.getElementById("message");
+    message.innerHTML = "<h2> text value: " + text + "<h2>";
+    for (let i = 0; i < genders.length; i++)
+    {
+        let status = genders[i].checked == true ? "checked" : "unchecked"; 
+        message.innerHTML += "<h2> gender value: " + genders[i].value + " status: " + status + "<h2>";
+    }
+}
+
+//Demo16.html
+function maximum(getal1, getal2) {
+    return getal1 > getal2 ? getal1 : getal2;
+}

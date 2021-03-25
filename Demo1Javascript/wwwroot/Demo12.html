@@ -5,13 +5,16 @@
     <title>Oefening : function Button onclick</title>
 </head>
 <body>
-    <form name="inputForm" method="post" action="">
+    <form name="inputForm">
         Getal 1:<br />
-        <input type="number" id="getal1" value="" />
+        <input type="number" name="getal1" id="getal1" value="" />
         <br />
         Getal 2:<br />
-        <input type="number" id="getal2" value="" />
-        <input type="button" value="som" onclick="som()" />
+        <input type="number" name="getal2" id="getal2" value="" /><br />
+        <input type="button" value="som" onclick="som()" /><br />
+        <input type="button" value="max" onclick="alert('Het max is: ' + maximum(document.inputForm.getal1.value,document.inputForm.getal2.value))" />
+        <br />
+        <button onclick="alert('clicked on image in button!')"><img src="http://www.moorsmagazine.com/images/leaning-tower-pisa.jpg" alt="pisa tower image"  /></button>
         <br />
         Reg expression: <br />
         <input type="text" id="input" value="" pattern="[a-zA-Z]+[0-9]{1}-[0-9]{4}" />
