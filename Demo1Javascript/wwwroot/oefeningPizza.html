@@ -1,0 +1,45 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bestel een pizza</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+    <form name="orderPizzaForm" id="orderPizzaForm">
+        <fieldset>
+            <legend>Plaats Bestelling</legend>
+            <label for="naam">Naam</label>
+            <input type="text" name="naam" id="naam" placeholder="Naam" required />
+            <!--nog toe te voegen: Voornaam, Email, wachtwoord-->
+            <label for="pizza">Pizza</label>
+            <select name="pizza" id="pizza" required>
+                <option value="napolitano">Napolitano</option>
+                <option value="4fromaggi">Quatro fromaggi</option>
+                <option value="mozzarello" selected>Mozarella</option>
+                <!--nog toe te voegen: opties Speciale en Bolognese-->
+            </select>
+            <div>
+                <div class="description">Extra's?</div>
+                <!--nog toe te voegen: 3 checkboxes met ids en naam=extras en ids: kaas, hesp, tomaten
+            standaard staan kaas en tomaten aangevinkt-->
+            </div>
+            <div>
+                <!--label Datum en input type="date", name en id = "datum" en required-->
+            </div>
+            <div>
+                <div class="description">Uur</div>
+                <!--3 radio buttons met naam:"levering" en ids lev16, lev18, lev20-->
+                <!--standaard id 18u-20u op checked-->
+            </div>
+            <!--hier nog een label Extra informatie en een textarea met name en id="extra"-->
+            <input type="button" value="Bestel" />
+        </fieldset>
+            
+        </form>
+
+    </body>
+
+    </html>
